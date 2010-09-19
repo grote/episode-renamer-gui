@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Episode Renamer
+GenericName=TV episodes renamer
+Comment=Renames episodes of TV shows with proper names
+Categories=Utility;
+Exec=/usr/bin/episoderenamer-gui
+Icon=episoderenamer_gui
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+

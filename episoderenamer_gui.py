@@ -24,12 +24,19 @@ from PyQt4 import QtCore, QtGui
 from ui_episoderenamer_gui import Ui_MainWindow
 import episoderenamer
 
+VERSION = "0.1.0"
+
 class EpisodeRenamerGUI(QtGui.QMainWindow):
 	def __init__(self, parent=None):
 		QtGui.QWidget.__init__(self, parent)
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
-		self.setWindowIcon(QtGui.QIcon("episoderenamer_gui.svg"))
+		
+		# Icon
+		fallbackIcon = QtGui.QIcon()
+		if os.path.exists("episoderenamer_gui.svg"):
+			fallbackIcon = QtGui.QIcon("episoderenamer_gui.svg")
+		self.setWindowIcon(QtGui.QIcon().fromTheme("episoderenamer_gui", fallbackIcon))
 		
 		# Model
 		self.model = QtGui.QStandardItemModel()
@@ -216,3 +223,12 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		for index in row_index:
 			self.model.removeRows(index.row(), 1)
 		
+
+def main():
+	app = QtGui.QApplication(sys.argv)
+	ergui = EpisodeRenamerGUI()
+	ergui.show()
+	sys.exit(app.exec_())
+
+if __name__ == "__main__":
+	main()
