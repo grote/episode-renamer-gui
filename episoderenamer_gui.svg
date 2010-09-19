@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 10.0.3, SVG Export Plug-In . SVG Version: 3.0.0 Build 77)  -->
+
+<svg
+   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="105"
+   height="105"
+   viewBox="0 0 105 105"
+   overflow="visible"
+   enable-background="new 0 0 128 128"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="episoderenamer_gui.svg"
+   style="overflow:visible"><metadata
+   id="metadata98"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs96"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 64 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="128 : 64 : 1"
+   inkscape:persp3d-origin="64 : 42.666667 : 1"
+   id="perspective100" />
+		
+		
+	</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1119"
+   id="namedview94"
+   showgrid="false"
+   showborder="true"
+   inkscape:showpageshadow="true"
+   borderlayer="false"
+   inkscape:zoom="5.2149125"
+   inkscape:cx="51.618808"
+   inkscape:cy="51.138798"
+   inkscape:window-x="-4"
+   inkscape:window-y="-4"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg2" />
+	<g
+   id="g5"
+   transform="translate(-8.1107267,-31.032584)">
+			<g
+   id="g7">
+				
+				
+			</g>
+			<g
+   id="g13">
+				
+				
+			</g>
+			<path
+   style="fill:#333333"
+   id="path19"
+   d="m 112.619,125.717 c 0,1.144 -0.919,2.07 -2.052,2.07 H 10.736 c -1.133,0 -2.05,-0.927 -2.05,-2.07 L 9.164,41.106 c 0,-1.145 0.918,-2.068 2.05,-2.068 h 99.832 c 1.132,0 2.051,0.924 2.051,2.068 l -0.478,84.611 z" />
+			<linearGradient
+   y2="99.7845"
+   x2="60.891102"
+   y1="29.6812"
+   x1="60.891102"
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_1_">
+				<stop
+   id="stop22"
+   style="stop-color:#FFFFFF"
+   offset="0" />
+				<stop
+   id="stop24"
+   style="stop-color:#9D9D9D"
+   offset="0.3678" />
+				<stop
+   id="stop26"
+   style="stop-color:#2D2D2D"
+   offset="0.8052" />
+				<stop
+   id="stop28"
+   style="stop-color:#000000"
+   offset="1" />
+				<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0" />
+				<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0.479" />
+				<a:midPointStop
+   style="stop-color:#000000"
+   offset="1" />
+			</linearGradient>
+			<path
+   style="opacity:0.81000001;fill:url(#XMLID_1_)"
+   id="path30"
+   d="m 110.616,124.004 c 0,1.086 -0.882,1.968 -1.968,1.968 H 12.656 c -1.087,0 -1.968,-0.882 -1.968,-1.968 l 0.478,-81.006 c 0,-1.088 0.882,-1.969 1.969,-1.969 h 95.991 c 1.086,0 1.969,0.881 1.969,1.969 l -0.479,81.006 z"
+   a:adobe-blending-mode="screen" />
+			<g
+   id="g32">
+				<linearGradient
+   y2="110.5096"
+   x2="61.502399"
+   y1="18.5396"
+   x1="61.502399"
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_2_">
+					<stop
+   id="stop35"
+   style="stop-color:#000000"
+   offset="0" />
+					<stop
+   id="stop37"
+   style="stop-color:#B5B5B5"
+   offset="1" />
+					<a:midPointStop
+   style="stop-color:#000000"
+   offset="0" />
+					<a:midPointStop
+   style="stop-color:#000000"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#B5B5B5"
+   offset="1" />
+				</linearGradient>
+				<path
+   style="fill:url(#XMLID_2_)"
+   id="path39"
+   d="m 102.646,107.807 c 0,0.934 -0.753,1.687 -1.685,1.687 h -78.92 c -0.931,0 -1.684,-0.753 -1.684,-1.687 V 48.068 c 0,-0.931 0.753,-1.685 1.684,-1.685 h 78.92 c 0.932,0 1.685,0.754 1.685,1.685 v 59.739 z" />
+				
+					<radialGradient
+   gradientUnits="userSpaceOnUse"
+   fy="122.3877"
+   fx="58.776901"
+   r="52.360401"
+   cy="122.3877"
+   cx="58.776901"
+   id="XMLID_3_">
+					<stop
+   id="stop42"
+   style="stop-color:#B8BBDA"
+   offset="0" />
+					<stop
+   id="stop44"
+   style="stop-color:#0D2D7D"
+   offset="1" />
+					<a:midPointStop
+   style="stop-color:#B8BBDA"
+   offset="0" />
+					<a:midPointStop
+   style="stop-color:#B8BBDA"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#0D2D7D"
+   offset="1" />
+				</radialGradient>
+				<path
+   style="fill:url(#XMLID_3_)"
+   id="path46"
+   d="m 100.328,106.127 c 0,0.876 -0.711,1.587 -1.589,1.587 H 24.266 c -0.878,0 -1.589,-0.711 -1.589,-1.587 V 49.75 c 0,-0.877 0.711,-1.589 1.589,-1.589 H 98.74 c 0.878,0 1.589,0.712 1.589,1.589 v 56.377 z" />
+			</g>
+			
+				<radialGradient
+   gradientUnits="userSpaceOnUse"
+   gradientTransform="matrix(1.0211,0,0,0.9264,27.8623,-8.8409)"
+   fy="60.216301"
+   fx="36.221699"
+   r="57.7388"
+   cy="60.216301"
+   cx="36.221699"
+   id="XMLID_4_">
+				<stop
+   id="stop49"
+   style="stop-color:#B8BBDA"
+   offset="0" />
+				<stop
+   id="stop51"
+   style="stop-color:#0D2D7D"
+   offset="1" />
+				<a:midPointStop
+   style="stop-color:#B8BBDA"
+   offset="0" />
+				<a:midPointStop
+   style="stop-color:#B8BBDA"
+   offset="0.5" />
+				<a:midPointStop
+   style="stop-color:#0D2D7D"
+   offset="1" />
+			</radialGradient>
+			<path
+   style="opacity:0.77999998;fill:url(#XMLID_4_)"
+   id="path53"
+   d="m 23.57,59.344 c 0,11.951 17.039,21.64 38.059,21.64 21.018,0 38.057,-9.688 38.057,-21.64 0,-3.993 -1.909,-7.729 -5.227,-10.94 H 28.798 c -3.319,3.21 -5.228,6.947 -5.228,10.94 z" />
+			<g
+   id="g55">
+				<linearGradient
+   y2="118.7914"
+   x2="98.688499"
+   y1="125.7139"
+   x1="98.688499"
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_5_">
+					<stop
+   id="stop58"
+   style="stop-color:#FFFFFF"
+   offset="0" />
+					<stop
+   id="stop60"
+   style="stop-color:#00CD00"
+   offset="0.8483" />
+					<stop
+   id="stop62"
+   style="stop-color:#00BD00"
+   offset="1" />
+					<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0" />
+					<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#00CD00"
+   offset="0.8483" />
+					<a:midPointStop
+   style="stop-color:#00CD00"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#00BD00"
+   offset="1" />
+				</linearGradient>
+				<path
+   style="fill:url(#XMLID_5_)"
+   id="path64"
+   d="m 102.397,118.534 c 0,2.048 -1.659,3.708 -3.708,3.708 -2.049,0 -3.71,-1.66 -3.71,-3.708 0,-2.049 1.661,-3.71 3.71,-3.71 2.049,0 3.708,1.661 3.708,3.71 z" />
+				<linearGradient
+   y2="115.8532"
+   x2="96.903099"
+   y1="111.6963"
+   x1="94.131798"
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_6_">
+					<stop
+   id="stop67"
+   style="stop-color:#009500"
+   offset="0.0112" />
+					<stop
+   id="stop69"
+   style="stop-color:#009000"
+   offset="0.2978" />
+					<stop
+   id="stop71"
+   style="stop-color:#005B00"
+   offset="1" />
+					<a:midPointStop
+   style="stop-color:#009500"
+   offset="0.0112" />
+					<a:midPointStop
+   style="stop-color:#009500"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#009000"
+   offset="0.2978" />
+					<a:midPointStop
+   style="stop-color:#009000"
+   offset="0.5" />
+					<a:midPointStop
+   style="stop-color:#005B00"
+   offset="1" />
+				</linearGradient>
+				<path
+   style="fill:url(#XMLID_6_)"
+   id="path73"
+   d="m 94.804,118.534 c 0,2.142 1.742,3.884 3.886,3.884 2.143,0 3.886,-1.742 3.886,-3.884 0,-2.144 -1.743,-3.888 -3.886,-3.888 -2.144,0 -3.886,1.745 -3.886,3.888 z m 0.353,0 c 0,-1.949 1.585,-3.533 3.532,-3.533 1.947,0 3.532,1.584 3.532,3.533 0,1.946 -1.585,3.532 -3.532,3.532 -1.947,0 -3.532,-1.586 -3.532,-3.532 z" />
+				<linearGradient
+   y2="119.1344"
+   x2="98.587898"
+   y1="115.1816"
+   x1="98.587898"
+   gradientUnits="userSpaceOnUse"
+   id="XMLID_7_">
+					<stop
+   id="stop76"
+   style="stop-color:#FFFFFF"
+   offset="0" />
+					<stop
+   id="stop78"
+   style="stop-color:#E9FAE9"
+   offset="0.1147" />
+					<stop
+   id="stop80"
+   style="stop-color:#B0EDB0"
+   offset="0.3539" />
+					<stop
+   id="stop82"
+   style="stop-color:#57D957"
+   offset="0.6936" />
+					<stop
+   id="stop84"
+   style="stop-color:#00C500"
+   offset="1" />
+					<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0" />
+					<a:midPointStop
+   style="stop-color:#FFFFFF"
+   offset="0.5424" />
+					<a:midPointStop
+   style="stop-color:#00C500"
+   offset="1" />
+				</linearGradient>
+				<path
+   style="fill:url(#XMLID_7_)"
+   id="path86"
+   d="m 98.706,118.675 c 1.291,-0.954 2.505,-1.275 3.038,-1.378 -0.513,-1.155 -1.671,-1.961 -3.016,-1.961 -1.82,0 -3.297,1.475 -3.297,3.295 0,0.287 0.036,0.563 0.104,0.828 0.535,0.1 1.842,0.198 3.171,-0.784 z" />
+			</g>
+			<path
+   style="opacity:0.81000001;fill:#666666"
+   id="path88"
+   d="m 77.539,120.482 h -36.61 v 6.461 h 36.61 v -6.461 z" />
+			<path
+   id="path90"
+   d="M 77.539,120.109 H 40.556 v 7.205 h 37.356 v -7.205 h -0.373 z m -0.37,0.745 c 0,0.619 0,5.097 0,5.719 -0.722,0 -35.148,0 -35.869,0 0,-0.622 0,-5.1 0,-5.719 0.721,0 35.147,0 35.869,0 z" />
+		</g>
+<text
+   xml:space="preserve"
+   style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+   x="27.652985"
+   y="60.467236"
+   id="text2906"><tspan
+     sodipodi:role="line"
+     id="tspan2908"
+     x="27.652985"
+     y="60.467236" /></text>
+
+<text
+   xml:space="preserve"
+   style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+   x="19.821478"
+   y="64.153862"
+   id="text2910"><tspan
+     sodipodi:role="line"
+     id="tspan2912"
+     x="19.821478"
+     y="64.153862"
+     style="font-size:48px;font-weight:bold;fill:#ff7f2a;-inkscape-font-specification:Bitstream Vera Sans Bold">ER</tspan></text>
+
+</svg>

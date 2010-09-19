@@ -29,6 +29,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		QtGui.QWidget.__init__(self, parent)
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.setWindowIcon(QtGui.QIcon("episoderenamer_gui.svg"))
 		
 		# Model
 		self.model = QtGui.QStandardItemModel()
