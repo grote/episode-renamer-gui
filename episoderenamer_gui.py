@@ -172,7 +172,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		# Get List of Files
 		files = {}
 		for row in range(0,self.model.rowCount()):
-			full_filename = str(self.model.item(row).text())
+			full_filename = unicode(self.model.item(row).text().toUtf8(), "utf-8")
 			files[os.path.basename(full_filename)] = full_filename
 		
 		# Get Mapping from Old Files to New Files
@@ -204,9 +204,9 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		# Rename all files that habe new names
 		row_index = []
 		for row in range(0,self.model.rowCount()):
-			new_file = str(self.model.item(row, 1).text())
+			new_file = unicode(self.model.item(row, 1).text().toUtf8(), "utf-8")
 			if new_file != "":
-				old_filename = str(self.model.item(row, 0).text())
+				old_filename = unicode(self.model.item(row, 0).text().toUtf8(), "utf-8")
 				new_filename = os.path.join(os.path.dirname(old_filename), new_file)
 				
 				try:
