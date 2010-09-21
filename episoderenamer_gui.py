@@ -19,6 +19,7 @@
 
 import sys
 import os
+import ConfigParser
 from PyQt4 import QtCore, QtGui
 
 from ui_episoderenamer_gui import Ui_MainWindow
@@ -32,12 +33,32 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
 		
+		# Config
+		defaults = {
+			'show_advanced_settings' : 'false',
+			'data_source' : '0'
+		}
+		self.config = ConfigParser.RawConfigParser(defaults)
+		self.configfile = os.path.expanduser('~/.config/episoderenamer.conf')
+		configfiles = self.config.read(['episoderenamer.conf', self.configfile])
+		if len(configfiles) > 0:
+			self.configfile = configfiles[0]
+		if self.config.getboolean('DEFAULT', 'show_advanced_settings'):
+			self.ui.modeAction.setChecked(True)
+		self.ui.sourceComboBox.setCurrentIndex(self.config.getint('DEFAULT', 'data_source'))
+		if self.config.has_option('DEFAULT', 'file_mask'):
+			if self.config.get('DEFAULT', 'file_mask') == self.ui.maskComboBox.itemText(0):
+				self.config.remove_option('DEFAULT', 'file_mask')
+			else:
+				self.ui.maskComboBox.addItem(self.config.get('DEFAULT', 'file_mask'))
+				self.ui.maskComboBox.setCurrentIndex(1)
+		
 		# Icon
 		fallbackIcon = QtGui.QIcon()
 		if os.path.exists("episoderenamer_gui.svg"):
 			fallbackIcon = QtGui.QIcon("episoderenamer_gui.svg")
 		self.setWindowIcon(QtGui.QIcon().fromTheme("episoderenamer_gui", fallbackIcon))
-		
+
 		# Model
 		self.model = QtGui.QStandardItemModel()
 		header = QtCore.QStringList("Episode")
@@ -53,6 +74,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		QtCore.QObject.connect(self.ui.renameFilesAction, QtCore.SIGNAL("triggered()"), self.rename_files)
 		QtCore.QObject.connect(self.ui.quitAction, QtCore.SIGNAL("triggered()"), self.close)
 		QtCore.QObject.connect(self.ui.modeAction, QtCore.SIGNAL("changed()"), self.switch_mode)
+		QtCore.QObject.connect(self.ui.maskComboBox, QtCore.SIGNAL("editTextChanged(QString)"), self.mask_changed)
 		
 		# Shortcuts
 		self.ui.removeFilesAction.setShortcuts(QtGui.QKeySequence.Delete)
@@ -90,10 +112,12 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		else:
 			self.ui.sourceLabel.hide()
 			self.ui.sourceComboBox.hide()
-			self.ui.atomicParsleyLabel.hide()
-			self.ui.atomicParsleyCheckBox.hide()
+#			self.ui.atomicParsleyLabel.hide()
+#			self.ui.atomicParsleyCheckBox.hide()
 			self.ui.maskLabel.hide()
 			self.ui.maskComboBox.hide()
+		self.ui.atomicParsleyLabel.hide()
+		self.ui.atomicParsleyCheckBox.hide()
 	
 	
 	def file_dialog(self):
@@ -126,6 +150,10 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 	def clear_files(self):
 		self.model.removeRows(0, self.model.rowCount())
 
+	
+	def mask_changed(self):
+		self.config.set('DEFAULT', 'file_mask', str(self.ui.maskComboBox.currentText()))
+	
 
 	def dragEnterEvent(self, event):
 		if event.mimeData().hasUrls():
@@ -222,7 +250,14 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		# Delete renamed rows
 		for index in row_index:
 			self.model.removeRows(index.row(), 1)
-		
+	
+
+	def closeEvent(self, event):
+		self.config.set('DEFAULT', 'show_advanced_settings', str(self.ui.modeAction.isChecked()))
+		self.config.set('DEFAULT', 'data_source', str(self.ui.sourceComboBox.currentIndex()))
+		with open(self.configfile, 'wb') as configfile:
+			self.config.write(configfile)
+
 
 def main():
 	app = QtGui.QApplication(sys.argv)
