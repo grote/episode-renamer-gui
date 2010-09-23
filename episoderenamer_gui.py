@@ -169,9 +169,25 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 			for url in event.mimeData().urls():
 				if url.scheme() == "file":
 					self.add_file(url.path())
+	
+
+	def showMsgBox(self, title, text, icon, info_text=''):
+		msgBox = QtGui.QMessageBox(self)
+		msgBox.setWindowTitle(title)
+		msgBox.setIcon(icon)
+		msgBox.setText(text)
+		msgBox.exec_()
 
 
 	def get_new_filenames(self):
+		if self.model.rowCount() == 0:
+			self.showMsgBox(
+					"Episode Renamer - No Files",
+					"Please add some files first, so new names can be found for them!",
+					QtGui.QMessageBox.Information
+			)
+			return
+
 		show_name = str(self.ui.showLineEdit.text())
 
 		import optparse
@@ -187,14 +203,21 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		else:
 			parser = episoderenamer.parse_imdb
 		try:
+			if show_name == '':
+				self.showMsgBox(
+					"Episode Renamer - No Show Name",
+					"Please enter the name of the show the episodes belong to!",
+					QtGui.QMessageBox.Information
+				)
+				return
 			# Get Show Name
 			show = parser(show_name, options)
 		except BaseException, e:
-			msgBox = QtGui.QMessageBox(self)
-			msgBox.setWindowTitle("Episode Renamer - No Show Name")
-			msgBox.setIcon(QtGui.QMessageBox.Warning)
-			msgBox.setText("The show '%s' could not be found with the current data source engine. Please try a different one." % show_name)
-			msgBox.exec_()
+			self.showMsgBox(
+					"Episode Renamer - No Show Name",
+					"The show '%s' could not be found with the current data source engine. Please try a different one." % show_name,
+					QtGui.QMessageBox.Warning
+			)
 			return
 		
 		# Get List of Files
@@ -241,12 +264,11 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 					os.rename(old_filename, new_filename)
 					row_index.append(QtCore.QPersistentModelIndex(self.model.index(row, 1)))
 				except EnvironmentError, e:
-					msgBox = QtGui.QMessageBox(self)
-					msgBox.setWindowTitle("Episode Renamer - Renaming Error")
-					msgBox.setIcon(QtGui.QMessageBox.Warning)
-					msgBox.setText("There was an error renaming '%s': %s" % (old_filename, str(e)))
-					msgBox.exec_()
-		
+					self.showMsgBox(
+							"Episode Renamer - Renaming Error",
+							"There was an error renaming '%s': %s" % (old_filename, str(e)),
+							QtGui.QMessageBox.Warning
+					)
 		# Delete renamed rows
 		for index in row_index:
 			self.model.removeRows(index.row(), 1)
