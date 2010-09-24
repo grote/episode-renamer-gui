@@ -125,10 +125,8 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		fd.setFileMode(QtGui.QFileDialog.ExistingFiles)
 		filenames = fd.getOpenFileNames()
 
-		from os.path import isfile
 		for filename in filenames:
-			if isfile(filename):
-				self.add_file(filename)
+			self.add_file(filename)
 
 
 	def add_file(self, filename):			
