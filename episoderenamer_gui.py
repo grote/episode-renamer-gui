@@ -188,7 +188,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 			)
 			return
 
-		show_name = str(self.ui.showLineEdit.text())
+		show_name = unicode(self.ui.showLineEdit.text().toUtf8(), "utf-8")
 
 		import optparse
 		options = optparse.Values
