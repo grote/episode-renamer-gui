@@ -123,7 +123,14 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 	def file_dialog(self):
 		fd = QtGui.QFileDialog(self)
 		fd.setFileMode(QtGui.QFileDialog.ExistingFiles)
-		filenames = fd.getOpenFileNames()
+		last_directory = ''
+		if self.config.has_option('DEFAULT', 'last_directory'):
+			last_directory = unicode(self.config.get('DEFAULT', 'last_directory'), "utf-8")
+		filenames = fd.getOpenFileNames(self, "Episode Renamer - Add Files", last_directory)
+		
+		# Save dir
+		if len(filenames) > 0:
+			self.config.set('DEFAULT', 'last_directory', os.path.dirname(unicode(filenames[0].toUtf8(), "utf-8")).encode('UTF-8'))
 
 		for filename in filenames:
 			self.add_file(filename)
