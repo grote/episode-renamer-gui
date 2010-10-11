@@ -1,9 +1,8 @@
-UI_File=episoderenamer_gui.ui
-Output_File=ui_episoderenamer_gui.py
-
 all:
-	pyuic4 ${UI_File} > ${Output_File}
+	pyuic4 episoderenamer_gui.ui -o ui_episoderenamer_gui.py -i 0
+	pyuic4 episoderenamer_gui_about.ui -o ui_about.py -i 0
 
 clean:
-	rm ${Output_File}
+	rm ui_episoderenamer_gui.py
+	rm ui_about.py
 	rm *.pyc

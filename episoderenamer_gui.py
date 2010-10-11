@@ -23,6 +23,7 @@ import ConfigParser
 from PyQt4 import QtCore, QtGui
 
 from ui_episoderenamer_gui import Ui_MainWindow
+from ui_about import Ui_Dialog
 import episoderenamer
 
 VERSION = "0.1.0"
@@ -75,6 +76,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		QtCore.QObject.connect(self.ui.quitAction, QtCore.SIGNAL("triggered()"), self.close)
 		QtCore.QObject.connect(self.ui.modeAction, QtCore.SIGNAL("changed()"), self.switch_mode)
 		QtCore.QObject.connect(self.ui.maskComboBox, QtCore.SIGNAL("editTextChanged(QString)"), self.mask_changed)
+		QtCore.QObject.connect(self.ui.aboutAction, QtCore.SIGNAL("triggered()"), self.showAbout)
 		
 		# Shortcuts
 		self.ui.removeFilesAction.setShortcuts(QtGui.QKeySequence.Delete)
@@ -182,6 +184,19 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		msgBox.setIcon(icon)
 		msgBox.setText(text)
 		msgBox.exec_()
+	
+	
+	def showAbout(self):
+		dialog = QtGui.QDialog(self)
+		dialog.ui = Ui_Dialog()
+		dialog.ui.setupUi(dialog)
+		dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+		p = dialog.ui.textEdit.palette()
+		c = p.color(QtGui.QPalette.Background)
+		c.setNamedColor("transparent")
+		p.setColor(QtGui.QPalette.Base, c)
+		dialog.ui.textEdit.setPalette(p)
+		dialog.exec_()
 
 
 	def get_new_filenames(self):
