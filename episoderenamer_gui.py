@@ -191,11 +191,7 @@ class EpisodeRenamerGUI(QtGui.QMainWindow):
 		dialog.ui = Ui_Dialog()
 		dialog.ui.setupUi(dialog)
 		dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-		p = dialog.ui.textEdit.palette()
-		c = p.color(QtGui.QPalette.Background)
-		c.setNamedColor("transparent")
-		p.setColor(QtGui.QPalette.Base, c)
-		dialog.ui.textEdit.setPalette(p)
+		dialog.ui.logo_label.setPixmap(QtGui.QPixmap(self.windowIcon().pixmap(100,100)))
 		dialog.exec_()
 
 
